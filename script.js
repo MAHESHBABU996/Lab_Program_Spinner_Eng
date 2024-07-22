@@ -69,7 +69,7 @@ let spinChart = new Chart(spinWheel, {
 const generateValue = (angleValue) => {
   for (let i of spinValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      text.innerHTML = `<p>Congratulations, Your Lab program number : ${i.value},
+      text.innerHTML = `<p>Congratulations,Your Lab program number: ${i.value},
       So You have to write program ${i.value}.</p>`;
       spinBtn.disabled = false;
       break;
