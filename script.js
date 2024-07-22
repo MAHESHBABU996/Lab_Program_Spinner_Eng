@@ -69,8 +69,8 @@ let spinChart = new Chart(spinWheel, {
 const generateValue = (angleValue) => {
   for (let i of spinValues) {
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      text.innerHTML = `<p>అభినందనల మీ ల్యాబ్ ప్రయోగం సంఖ్య : ${i.value},
-      మీరు  ${i.value} వ ప్రయోగం చేయండి .</p>`;
+      text.innerHTML = `<p>Congratulations, Your Lab program number : ${i.value},
+      So You have to write program ${i.value}.</p>`;
       spinBtn.disabled = false;
       break;
     }
@@ -81,7 +81,7 @@ let count = 0;
 let resultValue = 101;
 spinBtn.addEventListener("click", () => {
   spinBtn.disabled = true;
-  text.innerHTML = `<p>బాగా వ్రాయండి </p>`;
+  text.innerHTML = `<p>All The Best!</p>`;
   let randomDegree = Math.floor(Math.random() * (355 - 0 + 1) + 0);
   let rotationInterval = window.setInterval(() => {
     spinChart.options.rotation = spinChart.options.rotation + resultValue;
