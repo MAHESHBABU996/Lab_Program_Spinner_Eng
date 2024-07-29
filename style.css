@@ -2,6 +2,47 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 /*-----------------  VARIABLES  -----------------*/
+body {
+  font-size: 1rem; /* Use rem or em for scalable text */
+}
+/* Base styles for mobile */
+.container {
+  padding: 20px;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .container {
+      padding: 40px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .container {
+      padding: 60px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.flex-item {
+  flex: 1 1 calc(33.333% - 20px);
+}
+
+/* Example for Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
 :root {
     /* Colors */ 
     --white_color : rgb(255, 255, 255);
